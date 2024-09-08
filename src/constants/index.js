@@ -43,7 +43,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "5-99, Borragudem, Wargal, Siddipet, Telangana 502334",
+  address: "Hyderabad, Telangana",
   phoneNo: "+91 8790468868 ",
   email: "nithinlinga2@gmail.com",
 };
