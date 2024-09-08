@@ -27,7 +27,7 @@ export const PROJECTS = [
   {
     title: "Portfolio Website",
     image: project3,
-    link:"https://github.com/Nithinlinga/Student-Result-Management-System",
+    link:"https://github.com/Nithinlinga/React-portfolio-Nithin",
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Tailwind", "Framer-Motion"],
