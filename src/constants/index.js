@@ -19,7 +19,7 @@ export const PROJECTS = [
   {
     title: "Student Result Management System",
     image: project2,
-    link:"https://github.com/Nithinlinga/Student-Result-Management-System",
+    link:"http://studentresults.iceiy.com/",
     description:
       "An application which mainly aimed for administration, faculties and the students at the University. The adm inistration is responsible for overseeing different areas of the university, such as managing student marks and grades records and academic results.",
     technologies: ["HTML", "CSS", "JavaScript", "MySql"],
