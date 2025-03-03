@@ -2,6 +2,7 @@ import React from 'react'
 import { ABOUT_TEXT } from '../constants'
 import {motion} from "framer-motion"
 import pic7 from "../Photos-001/pic7.jpg"
+import nithin from "../Photos-001/nithin.jpg"
 const About = () => {
   return (
     <div className='border-b border-neutral-900 pb-4'>
@@ -16,7 +17,7 @@ const About = () => {
             transition={{duration:0.5}}
              className='w-full lg:w-1/2 lg:p-8'>
                 <div className='flex items-center justify-center'>
-                    <img className=' rounded-2xl' width={400} src={pic7} loading="lazy" alt="about" />
+                    <img className=' rounded-2xl' width={400} src={nithin} loading="lazy" alt="about" />
                 </div>
             </motion.div>
             <motion.div
