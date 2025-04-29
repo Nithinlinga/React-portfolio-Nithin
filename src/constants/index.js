@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import project5 from "../assets/projects/project5.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications.I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -17,9 +18,17 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB","Bootstrap"],
   },
   {
+    title: "Url Shortener",
+    image: project5,
+    link:"https://tranquil-zabaione-5bcb3e.netlify.app/",
+    description:
+      "A URL shortener with analytics allows users to create compact links while tracking their performance. It provides insights like total clicks, traffic sources, and user engagement over time.",
+    technologies: ["React.js", "Tailwind CSS", "Chart.js","Java","Spring Boot","PostgreSQL"]
+  },
+  {
     title: "Student Result Management System",
     image: project2,
-    link:"http://studentresults.iceiy.com/",
+    link:"https://github.com/Nithinlinga/Student-Result-Management-System",
     description:
       "An application which mainly aimed for administration, faculties and the students at the University. The adm inistration is responsible for overseeing different areas of the university, such as managing student marks and grades records and academic results.",
     technologies: ["HTML", "CSS", "JavaScript", "MySql"],
@@ -40,6 +49,7 @@ export const PROJECTS = [
       "A platform for showcasing the products. It is a responsive website which is developed using react and redux",
     technologies: ["HTML", "CSS", "React", "Express", "Redux"],
   },
+  
 ];
 
 export const CONTACT = {
