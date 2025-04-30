@@ -20,7 +20,7 @@ export const PROJECTS = [
   {
     title: "Url Shortener",
     image: project5,
-    link:"https://tranquil-zabaione-5bcb3e.netlify.app/",
+    link:"https://url-shorten-sb.netlify.app/",
     description:
       "A URL shortener with analytics allows users to create compact links while tracking their performance. It provides insights like total clicks, traffic sources, and user engagement over time.",
     technologies: ["React.js", "Tailwind CSS", "Chart.js","Java","Spring Boot","PostgreSQL"]
