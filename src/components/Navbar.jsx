@@ -1,22 +1,31 @@
 import React from 'react'
 import logo from '../assets/logo-white.png'
+import resume from '../assets/resume.pdf'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa'
+
 const Navbar = () => {
   return (
-    <div className=' mb-20 flex items-center justify-between py-6'>
-        <div className='flex flex-shrink-0 items-center'>
-        <img src={logo} className='mx-2 w-32'  alt="logo" />
-        </div>
-        <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
-        <a target="_blank" href="https://github.com/Nithinlinga"><FaGithub/></a>
-        <a target="_blank" href="https://www.linkedin.com/in/nithin-linga-09235a226/"><FaLinkedin/></a>
-        <a target="_blank" href="https://x.com/nithinkohli5"><FaSquareXTwitter/></a>
-        <a target="_blank" href="https://www.instagram.com/nithinlinga/"><FaInstagram/></a>
-        </div>
+    <div className='mb-20 flex items-center justify-between py-6'>
+      <div className='flex flex-shrink-0 items-center'>
+        <img src={logo} className='mx-2 w-32' alt="logo" />
+      </div>
+      <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nithinlinga"><FaGithub /></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nithin-linga-09235a226/"><FaLinkedin /></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://x.com/nithinkohli5"><FaSquareXTwitter /></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nithinlinga/"><FaInstagram /></a>
         
+        <a
+          href={resume}
+          download="LingaNithin_2025_SDE.pdf"
+          className="ml-4 rounded bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-gray-200"
+        >
+          Download Resume
+        </a>
+      </div>
     </div>
   )
 }
