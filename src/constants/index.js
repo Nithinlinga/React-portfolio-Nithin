@@ -33,14 +33,14 @@ export const PROJECTS = [
       "An application which mainly aimed for administration, faculties and the students at the University. The adm inistration is responsible for overseeing different areas of the university, such as managing student marks and grades records and academic results.",
     technologies: ["HTML", "CSS", "JavaScript", "MySql"],
   },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    link:"https://nithinlinga.vercel.app/",
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Tailwind", "Framer-Motion"],
-  },
+  // {
+  //   title: "Portfolio Website",
+  //   image: project3,
+  //   link:"https://nithinlinga.vercel.app/",
+  //   description:
+  //     "A personal portfolio website showcasing projects, skills, and contact information.",
+  //   technologies: ["HTML", "CSS", "React", "Tailwind", "Framer-Motion"],
+  // },
   {
     title: "Shopping Cart",
     image: project4,
