@@ -5,7 +5,7 @@ const EXPERIENCES = [
   {
     company: 'CIGI Technologies',
     role: 'Full Stack Developer Intern',
-    duration: 'Jan 2025 - Mar 2025',
+    duration: 'Dec 2024 - July 2025',
     description: `Worked on creating forms for ATPTour.com using Next.js (frontend), Laravel (backend), MySQL (DB), and AWS deployment.
 • Designed and optimized interactive web components with React.js
 • Reusable UI components built and integrated with a scalable back-end API, improving data flow and performance.
