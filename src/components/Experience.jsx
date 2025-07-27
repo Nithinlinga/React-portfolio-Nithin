@@ -4,20 +4,18 @@ import { motion } from 'framer-motion'
 const EXPERIENCES = [
   {
     company: 'CIGI Technologies',
-    role: 'Frontend Developer Intern',
+    role: 'Full Stack Developer Intern',
     duration: 'Jan 2025 - Mar 2025',
-    description:
-      'Worked on creating forms for ATPTour.com using Next.js (frontend), Laravel (backend), MySQL (DB), and AWS deployment.',
+    description: `Worked on creating forms for ATPTour.com using Next.js (frontend), Laravel (backend), MySQL (DB), and AWS deployment.
+• Designed and optimized interactive web components with React.js
+• Reusable UI components built and integrated with a scalable back-end API, improving data flow and performance.
+• Developed and integrated multiple frontend forms for ATP Tour website using Next.js, improving page performance and accessibility.
+• Added a mechanism to prevent concurrent edits by multiple users.
+• Proposed and implemented a strategy to retrieve distinct form data from a shared database table, enabling precise data access and improving form handling efficiency.
+• Built REST APIs in Laravel 10 to handle user data, authentication, and server-side validation.
+• Deployed full-stack applications to AWS EC2 and maintained them using CI/CD pipelines.`,
     technologies: ['Next.js', 'Laravel', 'MySQL', 'AWS', 'JavaScript', 'MUI']
-  },
-  // {
-  //   company: 'CIGroup',
-  //   role: 'Software Developer Intern',
-  //   duration: 'Oct 2024 - Dec 2024',
-  //   description:
-  //     'Contributed to enterprise-grade application modules involving dynamic form logic, autosave APIs, and PDF generation.',
-  //   technologies: ['React.js', 'Material UI', 'Axios', 'PDFMake']
-  // }
+  }
 ]
 
 const Experience = () => {
@@ -52,8 +50,12 @@ const Experience = () => {
               className='w-full max-w-xl lg:w-3/4'
             >
               <h4 className='mb-2 font-semibold'>{exp.role}</h4>
-              <p className='mb-4 text-neutral-400'>{exp.description}</p>
-              <div className='flex flex-wrap gap-2'>
+              {exp.description.split('•').map((line, i) => (
+                <p key={i} className='mb-2 text-neutral-400'>
+                  {line.trim() && (i === 0 ? line.trim() : `• ${line.trim()}`)}
+                </p>
+              ))}
+              <div className='flex flex-wrap gap-2 mt-4'>
                 {exp.technologies.map((tech, i) => (
                   <span
                     key={i}
