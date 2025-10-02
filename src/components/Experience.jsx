@@ -1,7 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const EXPERIENCES = [
+const EXPERIENCES = [  {
+company: 'Cognizant Technology Solutions',
+role: 'Programmer Analyst Trainee (Java Full Stack React)',
+duration: 'Aug 2025 - Present',
+description: `Contributed to the development of enterprise-grade web applications using React (frontend) and Spring Boot (backend), with MySQL as the database.
+• Designed and implemented responsive, reusable UI components in React.js with Redux for state management.
+• Integrated frontend modules with RESTful APIs built in Spring Boot, ensuring seamless data flow and robust validation.
+• Developed normalized JPA entities and relationships to support booking, user management, and service workflows.
+• Implemented authentication and role-based access control, enhancing application security and user experience.`,
+technologies: ['React.js', 'Spring Boot', 'Java', 'MySQL', 'AWS', 'JavaScript', 'Redux', 'Tailwind CSS']
+
+  },
   {
     company: 'CIGI Technologies',
     role: 'Full Stack Developer Intern',
@@ -10,12 +21,10 @@ const EXPERIENCES = [
 • Designed and optimized interactive web components with React.js
 • Reusable UI components built and integrated with a scalable back-end API, improving data flow and performance.
 • Developed and integrated multiple frontend forms for ATP Tour website using Next.js, improving page performance and accessibility.
-• Added a mechanism to prevent concurrent edits by multiple users.
-• Proposed and implemented a strategy to retrieve distinct form data from a shared database table, enabling precise data access and improving form handling efficiency.
-• Built REST APIs in Laravel 10 to handle user data, authentication, and server-side validation.
-• Deployed full-stack applications to AWS EC2 and maintained them using CI/CD pipelines.`,
+• Added a mechanism to prevent concurrent edits by multiple users.`,
     technologies: ['Next.js', 'Laravel', 'MySQL', 'AWS', 'JavaScript', 'MUI']
   }
+
 ]
 
 const Experience = () => {
