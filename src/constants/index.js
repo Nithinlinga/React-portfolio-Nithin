@@ -1,6 +1,6 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
+import project6 from "../assets/projects/project-6.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project5.png";
 
@@ -27,7 +27,7 @@ export const PROJECTS = [
   },
   {
   title: "Vehicle Service Booking",
-  image: project5,
+  image: project6,
   link: "https://github.com/Nithinlinga/Vehicle-service-booking",
   description:
     "A full-stack microservices-based web application that enables users to book vehicle service appointments online. It features user authentication, service history tracking, and an admin dashboard for managing bookings. Integrated analytics provide insights into booking trends and service performance. Each core module—user management, booking, and analytics—is built as an independent microservice for better scalability and maintainability.",
