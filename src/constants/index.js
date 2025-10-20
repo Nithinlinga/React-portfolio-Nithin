@@ -1,6 +1,6 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
-import project6 from "../assets/projects/project-6.jpg";
+import project6 from "../assets/projects/project-6.png";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project5.png";
 
