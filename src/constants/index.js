@@ -31,7 +31,7 @@ export const PROJECTS = [
   link: "https://github.com/Nithinlinga/Vehicle-service-booking",
   description:
     "A full-stack microservices-based web application that enables users to book vehicle service appointments online. It features user authentication, service history tracking, and an admin dashboard for managing bookings. Integrated analytics provide insights into booking trends and service performance. Each core module—user management, booking, and analytics—is built as an independent microservice for better scalability and maintainability.",
-  technologies: ["React.js", "Tailwind CSS", "Java", "Spring Boot", "PostgreSQL", "Microservices"]
+  technologies: ["React.js", "Tailwind CSS", "Java", "Spring Boot", "MySQL", "Microservices"]
   },
   {
     title: "Student Result Management System",
