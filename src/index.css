@@ -4,6 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  font-family:"Inter",sans-serif;
+:root {
+  font-family: "Inter", sans-serif;
+  --color-bg: #ffffff;
+  --color-surface: #f7fafc; /* soft neutral */
+  --color-text: #0b1220; /* deep navy */
+  --color-muted: #6b7280; /* neutral muted */
+  --color-border: #e6eef6; /* subtle border */
+  --accent-teal: #1fa2a6; /* muted teal */
+  --accent-navy: #0b1f3b; /* deep navy */
+  --accent-amber: #c77a00; /* warm amber */
+}
+
+:root.dark {
+  --color-bg: #071229;
+  --color-surface: #071a2a;
+  --color-text: #e6eef6;
+  --color-muted: #94a3b8;
+  --color-border: #102132;
+  --accent-teal: #06b6d4;
+  --accent-navy: #0b1220;
+  --accent-amber: #f59e0b;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  @apply transition-colors duration-300;
 }
