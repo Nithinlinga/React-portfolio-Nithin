@@ -83,7 +83,7 @@ const Navbar = () => {
             {/* Resume Button - Hidden on Mobile */}
             <motion.a
               href={resume}
-              download="LingaNithin_2025_SDE.pdf"
+              target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className='hidden sm:block px-4 sm:px-6 py-2 rounded-full bg-gradient-to-r from-[var(--accent-teal)] via-[var(--accent-navy)] to-[var(--accent-amber)] text-white font-semibold text-sm shadow-lg hover:opacity-95 transition-all'
@@ -138,7 +138,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.02 }}
               className="rounded-lg bg-gradient-to-r from-[var(--accent-teal)] via-[var(--accent-navy)] to-[var(--accent-amber)] px-4 py-3 text-white font-semibold text-sm w-full text-center hover:shadow-lg transition-all mt-2"
             >
-              Download Resume
+              Resume
             </motion.a>
           </div>
         </motion.div>
