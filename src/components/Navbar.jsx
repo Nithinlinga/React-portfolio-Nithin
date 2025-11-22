@@ -134,6 +134,7 @@ const Navbar = () => {
             
             <motion.a
               href={resume}
+              target="_blank"
               whileHover={{ scale: 1.02 }}
               className="rounded-lg bg-gradient-to-r from-[var(--accent-teal)] via-[var(--accent-navy)] to-[var(--accent-amber)] px-4 py-3 text-white font-semibold text-sm w-full text-center hover:shadow-lg transition-all mt-2"
             >
