@@ -43,8 +43,13 @@ const Technologies = () => {
         initial={{opacity:0,y:-100}}
         transition={{duration:0.6}}
         className='my-16 lg:my-24 text-center text-4xl sm:text-5xl lg:text-6xl font-bold'
-        >
-          <span className='text-transparent bg-gradient-to-r from-[var(--accent-navy)] via-[var(--accent-teal)] to-[var(--accent-amber)] bg-clip-text'>Technologies</span>
+        style={{
+          background: 'linear-gradient(to right, var(--accent-navy), var(--accent-teal), var(--accent-amber))',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
+          Technologies
         </motion.h1>
 
         <motion.div
@@ -63,10 +68,21 @@ const Technologies = () => {
                   animate="animate"
                   whileHover={{ scale: 1.2, rotateZ: 5, y: -5 }}
                   whileTap={{ scale: 0.95 }}
-                  className='rounded-2xl border-2 border-[var(--color-border)]/30 p-6 bg-gradient-to-br from-white/60 to-[var(--accent-teal)]/8 dark:from-gray-900/40 dark:to-[var(--accent-navy)]/8 hover:border-[var(--accent-teal)]/30 transition-all shadow-lg hover:shadow-2xl hover:shadow-glow-teal/10'
-                >
+                  className='rounded-2xl border-2 p-6 transition-all shadow-lg hover:shadow-2xl'
+                  style={{
+                    background: isDark
+                      ? 'linear-gradient(135deg, rgba(10, 20, 42, 0.4) 0%, rgba(11, 31, 59, 0.08) 100%)'
+                      : 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(30, 58, 95, 0.06) 100%)',
+                    borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.2)',
+                    boxShadow: isDark 
+                      ? '0 4px 16px rgba(6, 182, 212, 0.1)' 
+                      : '0 4px 16px rgba(8, 145, 178, 0.12)'
+                  }}>
                   <IconComponent className={`text-5xl sm:text-6xl lg:text-7xl ${tech.color} transition-all`}/>
-                  <p className='text-xs sm:text-sm text-center text-gray-700 dark:text-gray-300 mt-3 font-semibold'>{tech.name}</p>
+                  <p className='text-xs sm:text-sm text-center mt-3 font-semibold'
+                    style={{
+                      color: isDark ? '#d1d5db' : '#5a6b7d'
+                    }}>{tech.name}</p>
                 </motion.div>
               );
             })}

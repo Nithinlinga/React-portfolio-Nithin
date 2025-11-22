@@ -69,7 +69,10 @@ const Hero = () => {
                         variants={container(0)}
                         initial="hidden"
                         animate="visible"
-                        className='pb-6 lg:pb-8 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight'>
+                        className='pb-6 lg:pb-8 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-tight'
+                        style={{
+                            color: isDark ? 'white' : '#0a1428'
+                        }}>
                             Nithin 
                             <span className='block'>Linga</span>
                         </motion.h1>
@@ -90,8 +93,10 @@ const Hero = () => {
                         variants={container(1)}
                         initial="hidden"
                         animate="visible"
-                        className='max-w-2xl py-4 lg:py-8 font-light text-base sm:text-lg lg:text-xl tracking-tight text-gray-700 dark:text-gray-300 leading-relaxed text-center lg:text-left'
-                        >
+                        className='max-w-2xl py-4 lg:py-8 font-light text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed text-center lg:text-left'
+                        style={{
+                            color: isDark ? '#d1d5db' : '#5a6b7d'
+                        }}>
                             {HERO_CONTENT}
                         </motion.p>
                         
@@ -115,7 +120,19 @@ const Hero = () => {
                             href="#contact"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className='rounded-full border-2 border-[var(--accent-amber)] px-8 py-4 text-[var(--accent-navy)] dark:text-[var(--accent-teal)] font-semibold text-lg hover:bg-[var(--accent-amber)] hover:text-white transition-all text-center'
+                            className='rounded-full border-2 px-8 py-4 font-semibold text-lg hover:text-white transition-all text-center'
+                            style={{
+                                borderColor: 'var(--accent-amber)',
+                                color: isDark ? 'var(--accent-teal)' : 'var(--accent-navy)',
+                                background: isDark ? 'transparent' : 'linear-gradient(135deg, rgba(217, 119, 6, 0.08) 0%, rgba(217, 119, 6, 0.04) 100%)',
+                                boxShadow: isDark ? 'none' : '0 4px 12px rgba(217, 119, 6, 0.12)'
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'var(--accent-amber)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = isDark ? 'transparent' : 'linear-gradient(135deg, rgba(217, 119, 6, 0.08) 0%, rgba(217, 119, 6, 0.04) 100%)';
+                            }}
                             >
                                 Let's Connect
                             </motion.a>
@@ -144,8 +161,13 @@ const Hero = () => {
                         <motion.div
                         whileHover={{ scale: 1.02, rotateY: 5 }}
                         transition={{ duration: 0.4 }}
-                        className='relative z-10 overflow-hidden rounded-3xl border-2 border-[var(--color-border)]/40'
-                        >
+                        className='relative z-10 overflow-hidden rounded-3xl border-2'
+                        style={{
+                            borderColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(8, 145, 178, 0.25)',
+                            boxShadow: isDark 
+                                ? '0 8px 32px rgba(6, 182, 212, 0.15)' 
+                                : '0 8px 32px rgba(8, 145, 178, 0.2)'
+                        }}>
                             <img
                             width={500}
                             height={600}

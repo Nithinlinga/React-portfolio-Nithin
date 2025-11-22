@@ -15,8 +15,13 @@ const Projects = () => {
         initial={{opacity:0,y:-100}}
         transition={{duration:0.6}}
         className='my-16 lg:my-24 text-center text-4xl sm:text-5xl lg:text-6xl font-bold'
-        >
-          <span className='text-transparent bg-gradient-to-r from-[var(--accent-navy)] via-[var(--accent-teal)] to-[var(--accent-amber)] bg-clip-text'>Featured Projects</span>
+        style={{
+          background: 'linear-gradient(to right, var(--accent-navy), var(--accent-teal), var(--accent-amber))',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
+          Featured Projects
         </motion.h1>
 
         <div className='space-y-12 lg:space-y-20'>
@@ -28,7 +33,13 @@ const Projects = () => {
                 transition={{duration:0.6, delay: index * 0.1}}
               className='group mx-auto max-w-4xl'
                 >
-                <div className='flex flex-col lg:flex-row gap-6 items-start lg:items-center bg-gradient-to-br from-[var(--accent-teal)]/8 to-white/90 dark:from-[var(--accent-navy)]/12 dark:to-[var(--color-surface)]/60 p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all'>
+                <div className='flex flex-col lg:flex-row gap-6 items-start lg:items-center p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all border'
+                  style={{
+                    background: isDark 
+                      ? 'linear-gradient(135deg, rgba(11, 31, 59, 0.12) 0%, rgba(7, 26, 42, 0.6) 100%)'
+                      : 'linear-gradient(135deg, rgba(8, 145, 178, 0.08) 0%, rgba(248, 250, 253, 0.9) 100%)',
+                    borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.15)'
+                  }}>
                       {/* Project Image */}
                       <motion.div
                       whileInView={{opacity:1,x:0}}
@@ -36,7 +47,13 @@ const Projects = () => {
                       transition={{duration:0.7}}
                       className='w-full lg:w-48 flex-shrink-0'
                       >
-                        <div className='relative overflow-hidden rounded-2xl border-2 border-[var(--color-border)]/30 bg-white/60 dark:bg-[var(--color-surface)]/30'>
+                        <div className='relative overflow-hidden rounded-2xl border-2 bg-white/60 dark:bg-[var(--color-surface)]/30'
+                          style={{
+                            borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.2)',
+                            boxShadow: isDark 
+                              ? '0 4px 12px rgba(6, 182, 212, 0.08)'
+                              : '0 4px 12px rgba(8, 145, 178, 0.1)'
+                          }}>
                           {/* Glow Effect */}
                           <motion.div 
                           animate={{ rotate: 360 }}
@@ -65,27 +82,48 @@ const Projects = () => {
                       >
                         <div className='space-y-4'>
                           <div className='flex items-center justify-between'>
-                            <h3 className='text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white'>{project.title}</h3>
+                            <h3 className='text-xl sm:text-2xl font-semibold'
+                              style={{
+                                color: isDark ? 'white' : '#0a1428'
+                              }}>{project.title}</h3>
                             <motion.a  
                             target="_blank"   
                             rel="noopener noreferrer"
                             href={project.link}
                             whileHover={{ scale: 1.2, rotate: -20 }}
                             whileTap={{ scale: 0.95 }}
-                            className='p-3 rounded-full bg-gradient-to-br from-[var(--accent-navy)]/10 to-[var(--accent-teal)]/10 text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-lg transition-all'
+                            className='p-3 rounded-full text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-lg transition-all border'
+                            style={{
+                              background: isDark
+                                ? 'linear-gradient(135deg, rgba(11, 31, 59, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%)'
+                                : 'linear-gradient(135deg, rgba(30, 58, 95, 0.08) 0%, rgba(8, 145, 178, 0.06) 100%)',
+                              borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.2)',
+                              boxShadow: isDark 
+                                ? 'inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                                : 'inset 0 1px 0 rgba(255, 255, 255, 0.5)'
+                            }}
                             >
                               <FiExternalLink className='text-xl' />
                             </motion.a>
                           </div>
                       
-                          <p className='text-sm lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed'>{project.description}</p>
+                          <p className='text-sm lg:text-base leading-relaxed'
+                            style={{
+                              color: isDark ? '#d1d5db' : '#5a6b7d'
+                            }}>{project.description}</p>
                           
                           <div className='flex flex-wrap gap-2 pt-4'>
                             {project.technologies.map((tech,idx)=>(
                               <motion.span 
                               key={idx}
                               whileHover={{ y: -2 }}
-                              className='rounded-full bg-gradient-to-r from-[var(--accent-navy)]/8 to-[var(--accent-teal)]/8 dark:from-[var(--accent-navy)]/12 dark:to-[var(--accent-teal)]/12 px-4 py-2 text-xs sm:text-sm font-medium text-[var(--accent-navy)] dark:text-[var(--accent-teal)] transition-colors'
+                              className='rounded-full px-4 py-2 text-xs sm:text-sm font-medium text-[var(--accent-navy)] dark:text-[var(--accent-teal)] transition-colors border'
+                              style={{
+                                background: isDark
+                                  ? 'linear-gradient(135deg, rgba(11, 31, 59, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%)'
+                                  : 'linear-gradient(135deg, rgba(30, 58, 95, 0.08) 0%, rgba(8, 145, 178, 0.04) 100%)',
+                                borderColor: isDark ? 'rgba(6, 182, 212, 0.15)' : 'rgba(8, 145, 178, 0.12)'
+                              }}
                               >
                                 {tech}
                               </motion.span>

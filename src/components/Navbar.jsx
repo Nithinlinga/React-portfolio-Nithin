@@ -27,7 +27,15 @@ const Navbar = () => {
       className='sticky top-0 z-50 px-4 sm:px-6 lg:px-8 py-4 sm:py-5 mb-8 sm:mb-12'
     >
       {/* Navbar Background with Glassmorphism */}
-      <div className='absolute inset-0 bg-white/70 dark:bg-black/40 backdrop-blur-xl rounded-2xl shadow-xl'></div>
+      <div 
+        className='absolute inset-0 backdrop-blur-xl rounded-2xl shadow-xl border'
+        style={{
+          background: isDark 
+            ? 'rgba(0, 0, 0, 0.4)' 
+            : 'linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(248, 250, 253, 0.75) 100%)',
+          borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(139, 92, 246, 0.1)'
+        }}
+      ></div>
 
       <div className='relative max-w-7xl mx-auto'>
         <div className='flex items-center justify-between'>
@@ -55,7 +63,16 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
-                  className='p-3 rounded-full bg-gradient-to-br from-[var(--accent-navy)]/8 to-[var(--accent-teal)]/8 dark:from-[var(--accent-navy)]/10 dark:to-[var(--accent-teal)]/12 border border-[var(--color-border)]/40 text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-glow-navy transition-all'
+                  className='p-3 rounded-full border text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-glow-navy transition-all'
+                  style={{
+                    background: isDark
+                      ? 'linear-gradient(135deg, rgba(11, 31, 59, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%)'
+                      : 'linear-gradient(135deg, rgba(30, 58, 95, 0.08) 0%, rgba(8, 145, 178, 0.06) 100%)',
+                    borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.2)',
+                    boxShadow: isDark 
+                      ? 'inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                      : 'inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 4px 12px rgba(8, 145, 178, 0.08)'
+                  }}
                 >
                   <Icon className='text-lg' />
                 </motion.a>
@@ -96,7 +113,16 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className='lg:hidden p-2.5 sm:p-3 rounded-full bg-gradient-to-br from-[var(--accent-navy)]/8 to-[var(--accent-teal)]/8 border border-[var(--color-border)]/30 text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-glow-navy transition-all'
+              className='lg:hidden p-2.5 sm:p-3 rounded-full border text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-glow-navy transition-all'
+              style={{
+                background: isDark
+                  ? 'linear-gradient(135deg, rgba(11, 31, 59, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%)'
+                  : 'linear-gradient(135deg, rgba(30, 58, 95, 0.08) 0%, rgba(8, 145, 178, 0.06) 100%)',
+                borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.2)',
+                boxShadow: isDark 
+                  ? 'inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  : 'inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 4px 12px rgba(8, 145, 178, 0.08)'
+              }}
             >
               {isOpen ? (
                 <HiX className='text-xl sm:text-2xl' />
@@ -114,7 +140,11 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className='lg:hidden overflow-hidden'
         >
-          <div className='pt-4 pb-2 px-4 flex flex-col gap-3 border-t border-purple-200/30 dark:border-cyan-500/30 mt-4'>
+          <div className='pt-4 pb-2 px-4 flex flex-col gap-3 border-t mt-4'
+            style={{
+              borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(139, 92, 246, 0.2)'
+            }}
+          >
             {navLinks.map((link, index) => {
               const Icon = link.icon;
               return (
@@ -124,7 +154,13 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, x: 5 }}
-                  className='flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-[var(--accent-navy)]/6 to-[var(--accent-teal)]/6 dark:from-[var(--accent-navy)]/8 dark:to-[var(--accent-teal)]/14 text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-md transition-all'
+                  className='flex items-center gap-3 p-3 rounded-lg text-[var(--accent-navy)] dark:text-[var(--accent-teal)] hover:shadow-md transition-all border'
+                  style={{
+                    background: isDark
+                      ? 'linear-gradient(135deg, rgba(11, 31, 59, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%)'
+                      : 'linear-gradient(135deg, rgba(30, 58, 95, 0.06) 0%, rgba(8, 145, 178, 0.04) 100%)',
+                    borderColor: isDark ? 'rgba(6, 182, 212, 0.15)' : 'rgba(8, 145, 178, 0.12)'
+                  }}
                 >
                   <Icon className='text-lg' />
                   <span className='text-sm font-medium'>{link.name}</span>
@@ -136,7 +172,10 @@ const Navbar = () => {
               href={resume}
               target="_blank"
               whileHover={{ scale: 1.02 }}
-              className="rounded-lg bg-gradient-to-r from-[var(--accent-teal)] via-[var(--accent-navy)] to-[var(--accent-amber)] px-4 py-3 text-white font-semibold text-sm w-full text-center hover:shadow-lg transition-all mt-2"
+              className="rounded-lg px-4 py-3 text-white font-semibold text-sm w-full text-center hover:shadow-lg transition-all mt-2"
+              style={{
+                background: 'linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-navy) 50%, var(--accent-amber) 100%)'
+              }}
             >
               Resume
             </motion.a>

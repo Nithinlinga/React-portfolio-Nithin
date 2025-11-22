@@ -20,16 +20,23 @@ const Contact = () => {
         initial={{opacity:0,y:-100}}
         transition={{duration:0.6}}
         className='my-16 lg:my-24 text-center text-4xl sm:text-5xl lg:text-6xl font-bold'
-        >
-          <span className='text-transparent bg-gradient-to-r from-[var(--accent-navy)] via-[var(--accent-teal)] to-[var(--accent-amber)] bg-clip-text'>Let's Get in Touch</span>
+        style={{
+          background: 'linear-gradient(to right, var(--accent-navy), var(--accent-teal), var(--accent-amber))',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
+          Let's Get in Touch
         </motion.h1>
 
         <motion.p
         whileInView={{opacity:1}}
         initial={{opacity:0}}
         transition={{duration:0.6}}
-        className='text-center text-gray-700 dark:text-gray-300 mb-12 lg:mb-16 max-w-2xl text-lg leading-relaxed'
-        >
+        className='text-center mb-12 lg:mb-16 max-w-2xl text-lg leading-relaxed'
+        style={{
+          color: isDark ? '#d1d5db' : '#5a6b7d'
+        }}>
           I'm always excited to hear about new projects, opportunities, and interesting ideas. Whether you have a question or just want to say hi, feel free to reach out!
         </motion.p>
 
@@ -47,15 +54,33 @@ const Contact = () => {
               initial={{opacity:0,y:50}}
               whileInView={{opacity:1,y:0}}
               transition={{duration:0.6, delay: idx * 0.15}}
-              className={`w-full sm:w-auto inline-flex items-center gap-3 justify-start p-2.5 rounded-lg bg-[var(--color-surface)] dark:bg-[var(--color-surface)]/90 text-[var(--color-text)] hover:shadow-lg transition-all`}
-              >
+              className='w-full sm:w-auto inline-flex items-center gap-3 justify-start p-2.5 rounded-lg border transition-all'
+              style={{
+                background: isDark 
+                  ? 'linear-gradient(135deg, rgba(7, 26, 42, 0.6) 0%, rgba(11, 31, 59, 0.3) 100%)'
+                  : 'linear-gradient(135deg, rgba(248, 250, 253, 0.9) 0%, rgba(240, 250, 255, 0.7) 100%)',
+                borderColor: isDark ? 'rgba(6, 182, 212, 0.2)' : 'rgba(8, 145, 178, 0.15)',
+                boxShadow: isDark 
+                  ? '0 4px 12px rgba(6, 182, 212, 0.08)'
+                  : '0 4px 12px rgba(8, 145, 178, 0.1)'
+              }}>
                 <div className='relative z-10 flex items-center gap-4'>
-                  <div className={`p-2 rounded-lg bg-[var(--accent-navy)]/90 text-white`}>
-                    <Icon className='text-base sm:text-lg' />
+                  <div className='p-2 rounded-lg text-white'
+                    style={{
+                      background: 'linear-gradient(135deg, var(--accent-navy) 0%, var(--accent-teal) 100%)',
+                      border: isDark ? 'none' : '1px solid rgba(255,255,255,0.12)'
+                    }}>
+                    <Icon className='text-base sm:text-lg' style={{ color: isDark ? '#e6eef6' : '#ffffff' }} aria-hidden={false} />
                   </div>
                   <div className='flex flex-col text-left'>
-                    <span className='text-sm font-medium text-[var(--color-text)] dark:text-[var(--color-text)]'>{method.label}</span>
-                    <small className='text-xs text-[var(--color-muted)] dark:text-[var(--color-muted)]'>Tap to open</small>
+                    <span className='text-sm font-medium'
+                      style={{
+                        color: isDark ? '#e6eef6' : '#0a1428'
+                      }}>{method.label}</span>
+                    <small className='text-xs'
+                      style={{
+                        color: isDark ? '#94a3b8' : '#5a6b7d'
+                      }}>Tap to open</small>
                   </div>
                 </div>
               </motion.a>
@@ -81,12 +106,20 @@ const Contact = () => {
         whileInView={{opacity:1}}
         initial={{opacity:0}}
         transition={{duration:0.8, delay: 0.5}}
-        className='mt-16 lg:mt-20 pt-8 lg:pt-12 w-full flex flex-col items-center gap-4'
-        >
-            <p className='text-center text-sm lg:text-base text-gray-700 dark:text-gray-300'>
-            Made with <span className='text-[var(--accent-amber)] dark:text-[var(--accent-amber)]'>💛</span> by Nithin Linga
+        className='mt-16 lg:mt-20 pt-8 lg:pt-12 w-full flex flex-col items-center gap-4 border-t'
+        style={{
+          borderColor: isDark ? 'rgba(6, 182, 212, 0.1)' : 'rgba(8, 145, 178, 0.1)'
+        }}>
+            <p className='text-center text-sm lg:text-base'
+              style={{
+                color: isDark ? '#d1d5db' : '#5a6b7d'
+              }}>
+            Made with <span className='text-[var(--accent-amber)]'>💛</span> by Nithin Linga
           </p>
-          <p className='text-xs lg:text-sm text-gray-600 dark:text-gray-400'>
+          <p className='text-xs lg:text-sm'
+            style={{
+              color: isDark ? '#6b7280' : '#9ca3af'
+            }}>
             © 2025 Nithin Linga. All rights reserved.
           </p>
         </motion.div>
