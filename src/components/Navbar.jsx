@@ -1,5 +1,4 @@
 import logo from '../assets/logo-white.png'
-import resume from '../assets/resume.pdf'
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 import { BsSun, BsMoon } from 'react-icons/bs'
@@ -18,6 +17,7 @@ const Navbar = () => {
     { name: 'Twitter', href: 'https://x.com/nithinkohli5', icon: FaSquareXTwitter },
     { name: 'Instagram', href: 'https://www.instagram.com/nithinlinga/', icon: FaInstagram },
   ];
+  const resume="https://drive.google.com/file/d/1r7WiPcCtK03Bkoed8CGmdYvoOvirte36/view?usp=drive_link";
 
   return (
     <motion.nav 
@@ -134,7 +134,6 @@ const Navbar = () => {
             
             <motion.a
               href={resume}
-              download="LingaNithin_2025_SDE.pdf"
               whileHover={{ scale: 1.02 }}
               className="rounded-lg bg-gradient-to-r from-[var(--accent-teal)] via-[var(--accent-navy)] to-[var(--accent-amber)] px-4 py-3 text-white font-semibold text-sm w-full text-center hover:shadow-lg transition-all mt-2"
             >
