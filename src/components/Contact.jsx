@@ -8,8 +8,6 @@ const Contact = () => {
   const { isDark } = useTheme();
 
   const contactMethods = [
-    { icon: FiMapPin, label: CONTACT.address, href: "https://www.google.com/maps/search/17.820888,+78.566918?entry=tts&g_ep=EgoyMDI0MDkwNC4wKgBIAVAD", color: 'from-[var(--accent-teal)] to-[var(--accent-amber)]' },
-    { icon: FiPhone, label: CONTACT.phoneNo, href: 'tel:+918790468868', color: 'from-[var(--accent-teal)] to-[var(--accent-amber)]' },
     { icon: FiMail, label: CONTACT.email, href: "mailto:nithinlinga2@gmail.com?subject=Going through your portfolio&body=Hi Nithin Linga, Let's connect❤️", color: 'from-[var(--accent-navy)] to-[var(--accent-teal)]' },
   ];
 
@@ -89,7 +87,7 @@ const Contact = () => {
         </div>
 
         {/* Call to Action Button */}
-        <motion.a 
+        {/* <motion.a 
         href="mailto:nithinlinga2@gmail.com?subject=Going through your portfolio&body=Hi Nithin Linga, Let's connect❤️"
         whileInView={{opacity:1,y:0}}
         initial={{opacity:0,y:50}}
@@ -99,7 +97,7 @@ const Contact = () => {
         className='px-8 lg:px-12 py-4 lg:py-5 rounded-full bg-gradient-to-r from-[var(--accent-teal)] via-[var(--accent-navy)] to-[var(--accent-amber)] text-white font-bold text-lg shadow-2xl hover:opacity-95 transition-all'
         >
           Send Me a Message ✨
-        </motion.a>
+        </motion.a> */}
 
         {/* Footer */}
         <motion.div
