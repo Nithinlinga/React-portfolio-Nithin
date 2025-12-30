@@ -15,7 +15,6 @@ const Navbar = () => {
     { name: 'GitHub', href: 'https://github.com/Nithinlinga', icon: FaGithub },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nithin-linga-09235a226/', icon: FaLinkedin },
     { name: 'Twitter', href: 'https://x.com/nithinkohli5', icon: FaSquareXTwitter },
-    { name: 'Instagram', href: 'https://www.instagram.com/nithinlinga/', icon: FaInstagram },
   ];
   const resume="https://drive.google.com/file/d/1r7WiPcCtK03Bkoed8CGmdYvoOvirte36/view?usp=drive_link";
 
