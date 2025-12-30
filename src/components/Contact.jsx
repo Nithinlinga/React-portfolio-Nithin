@@ -6,8 +6,8 @@ import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
 
 const Contact = () => {
   const { isDark } = useTheme();
-
-  const contactMethods = [
+const contactMethods = [
+    { icon: FiPhone, label: CONTACT.phoneNo, href: 'tel:+918790468868', color: 'from-[var(--accent-teal)] to-[var(--accent-amber)]' },
     { icon: FiMail, label: CONTACT.email, href: "mailto:nithinlinga2@gmail.com?subject=Going through your portfolio&body=Hi Nithin Linga, Let's connect❤️", color: 'from-[var(--accent-navy)] to-[var(--accent-teal)]' },
   ];
 
